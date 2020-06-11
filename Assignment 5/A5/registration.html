@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Priya's Registration</title>
+        <!--including cc and js-->
+        <link rel="stylesheet" href="main.css"/>
+        <script src="registration.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="head">
+                <h1 class="name">
+                    BTI225 ASSIGNMENT 5
+                </h1>
+            </div>
+        </header>
+        
+            <!--Navigation-->
+            <div class ="main"></div>
+            <nav>
+                    <ul>
+                        <li><a href="index.html">Welcome Page</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </nav>
+            <!--Main contents-->
+            <form name="Sign up" action="https://httpbin.org/post" moethod="POST" onsubmit="return validate();">
+                <div class="main-content">
+                        <!--Form Start-->
+                        <form id ="signup" name="signup" method="POST" action="https://httpbin.org/post" onsubmit="return formValidation()">
+                        <!--Every input will execute function names "valid()" in order for something to type in-->
+                        <h4>User Name</h4>
+                        <!-- First Name -->
+                        <label for="fName">First Name</label>
+                        <input required type="text" name="fName" id="fName"><br>
+                        
+                        <!-- Last Name -->
+                        <label for="lName">Last Name</label>
+                        <input required type="text" name="lName" id="lName"><br>
+                        
+                        <h4>Shipping Address</h4>
+                        
+                        <!-- Unit # -->
+                        <label for="unitNumber">Unit#</label>
+                        <input required type="text" name="unitNumber" id="unit"><br>
+
+                        <!-- Street # -->
+                        <label for="streetNumber">Street #</label>
+                        <input required type="text" name="streetNumber" id="streetNum"><br>
+                        
+                        <!--Street Name-->
+                        <!--This patter allows no digit, more than one letter-->
+                        <label for="streetName">Street Name</label>
+                        <input onkeyup="valid()" pattern="[^0-9]{1,}" type="text" name="streetName" required><br>
+                        
+                        <!--This pattern allows letters and space-->
+                        <label for="city">City</label>
+                        <input required type="text" name="city" id="city" pattern="^[a-zA-Z]+$"><br>
+                        
+                        <!--Province-->
+                        <label for="Province">Province</label>
+
+                        <!--Dropbox for province. Ontario is default-->
+                        <select name="province">
+                            <option value="ON" selected>Ontario</option>
+                            <option value="QC">Quebec</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="AB">Alberta</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland and Labrador</option>
+                        </select>
+                        <br>
+                        
+                        <!-- Postal Code -->
+                        <!--This pattern allow (Letter Digit Letter Digit Letter Digit-->
+                        <label for="postalCode">Postal Code</label>
+                        <input required type="text" name="postalCode" id="postalCode"><br>
+                        
+                        <h4>Account Info</h4>
+                        
+                        <!-- Phone Number -->
+                        <!--This pattern allows ###-###-####-->
+                        <label for="phone">Phone Number</label>
+                        <input required type="text" name="phone" id="phone"><br>
+
+                        <!-- Email -->
+                        <!--This pattern allows email format-->
+                        <label for="email">Email</label>
+                        <input required type="email" name="email" id="email"><br>
+                        
+                        <!-- Username -->
+                        <!--username should start with letter and lenght should be more than 6-->
+                        <label for="username">Username</label>
+                        <input required type="text" name="username" id="username"><br>
+                        
+                        <!--Password-->
+                        <!--As we are not allowed to use pattern here, it will be dealt with by Javascript function -->
+                        <label for="password">Password</label>
+                        <input required type="password" name="password" id="password"><br>
+
+                        <!--Password match-->
+                        <!--This is hidden input which having my student info-->
+                        <label for="passwordMatch">Password Match</label>
+                        <input required type="password" name="password" id="passwordMatch"><br>
+
+                        <!--Submit-->
+                        <!--To make it in center, I put the buttons in the div-->
+                        <br><input type="submit" value="Submit information" />
+                        <input type="reset"  value="    Clear   " onclick="clear()"/>
+                    </form>
+                
+                </div>
+            
+            <!--Side-->
+            <div id="side"></div>
+            </div>
+            <!--Footer-->
+            <br><footer>Powered by PVK 7.0</footer>
+     <script src="registration.js"></script>
+    </body>
+</html>

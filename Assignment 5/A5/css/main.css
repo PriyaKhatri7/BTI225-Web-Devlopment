@@ -1,0 +1,140 @@
+/*background*/
+body {
+    margin: 10px 20px 10px;
+    font-family: 'Lato', sans-serif;
+    background: rgb(141, 186, 238);
+}
+
+
+/*To make header part be center with background color and font color*/
+header, footer {
+    border: 2px white;
+    border-radius: 25px;
+    width: 1600px; /*960*/
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25pt;
+    margin: 10px 0;
+    margin: 0 auto;
+    background-color:#000000;
+    color: rgb(53, 136, 161);
+}
+
+/*make header text center*/
+#head {
+    width:fit-content;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*To remove margin on top and bottom
+#head h1{
+    margin: 0;
+}*/
+
+/*Decide main part's height and width*/
+div.main{
+    height: 600px;
+    max-width: 1550px;
+    margin: 20px 20px -45px auto;
+}
+
+/*Decide main content's width and scroll function*/
+div.main-content {
+    width: 50%;
+    overflow: 25px;
+    height: 200px;
+    float: left;
+}
+
+/*Make input and select to be same size and margin*/
+div.main-content input, div.main-content select{
+    height: 20px;
+    width: 200px;
+    margin: 1px 5px 3px;
+    box-sizing: border-box;
+    float: center;
+}
+
+/*When the input is invalid, make the border red
+input:focus:invalid {
+    border: 2px solid rgb(224, 29, 29);
+} */
+
+/*Make the button size same*/
+#submit, #reset{
+    margin: 20px auto;
+    width: 100px;
+}
+
+/*Make the submit and reset buttons to be center*/
+div.button {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+/*make every p with margin 5px*/
+p{
+    padding: 5px;
+}
+
+/*Decide width of side panel and back ground color*/
+div.side {
+    line-height: 225px;
+    text-align: center;
+    background-color: #DDDDDD;
+    height: 225px;
+    width: 225px;
+    display: inline-block;
+    margin-bottom: 225px;
+    font-size: 25pt;
+    width: 20%;
+    min-height: 300px;
+    padding-top: 40px;
+    float: right;
+    
+}
+
+.side p, .body p {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+/*Decide width of navigation and back ground color*/
+nav {
+    background-color: #DDDDDD;
+    width: 20%;
+    font-size: 18pt;
+    min-height: 450px;
+    float: left;
+}
+
+/*To remove block point in front of the list*/
+nav ul {
+    -webkit-padding-start: 0px;
+    list-style-type: none;
+}
+
+/*To remove the underline of links*/
+nav ul a {
+    text-decoration: none;    
+}
+
+/*Not chaning color after visit the link*/
+nav ul a:visited {
+    color: black;
+}
+
+/*padding for list*/
+li{
+    padding: 5px;
+}
+
+/*Make it in the footer*/
+footer div.footer p {
+    margin: center;
+}
